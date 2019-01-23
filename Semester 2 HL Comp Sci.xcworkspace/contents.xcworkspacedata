@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:LostDigit/LostDigit.xcodeproj">
+      location = "group:Queue/Queue.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Queue/Queue.xcodeproj">
+      location = "group:Queue/Stack/Stack.xcodeproj">
    </FileRef>
 </Workspace>
