@@ -65,13 +65,13 @@
 				B81361A22200984B0066C0A3 /* AppDelegate.swift */,
 				B81361A42200984B0066C0A3 /* GameScene.sks */,
 				B81361BA2200988D0066C0A3 /* SKH.swift */,
+				B81361BC220099A40066C0A3 /* SKHGenerator.swift */,
 				B81361A82200984B0066C0A3 /* GameScene.swift */,
 				B81361AA2200984B0066C0A3 /* GameViewController.swift */,
 				B81361AC2200984B0066C0A3 /* Main.storyboard */,
 				B81361AF2200984C0066C0A3 /* Assets.xcassets */,
 				B81361B12200984C0066C0A3 /* LaunchScreen.storyboard */,
 				B81361B42200984C0066C0A3 /* Info.plist */,
-				B81361BC220099A40066C0A3 /* SKHGenerator.swift */,
 			);
 			path = RecursiveH;
 			sourceTree = "<group>";
