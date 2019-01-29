@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:RecursiveH/RecursiveH.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Fibonacci/Fibonacci.xcodeproj">
    </FileRef>
    <FileRef
