@@ -9,13 +9,14 @@
 import SpriteKit
 import GameplayKit
 
+var depth = 1
+
 class GameScene: SKScene {
     
-    var depth = 1
     
     
     override func didMove(to view: SKView) {
-        
+         backgroundColor = #colorLiteral(red: 0, green: 0.4793452024, blue: 0.9990863204, alpha: 1)
     }
     
     

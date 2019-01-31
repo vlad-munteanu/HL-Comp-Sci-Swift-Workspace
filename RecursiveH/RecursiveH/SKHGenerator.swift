@@ -13,11 +13,10 @@ class SKHGenerator: SKSpriteNode {
     
     var SKHArray = [SKH]()
     
+    
     init(size: CGSize) {
         super.init(texture: nil, color: UIColor.clear, size: CGSize(width: size.width, height: size.height))
         anchorPoint = CGPoint(x:-size.width, y:0)
-      
-        
     }
   
     

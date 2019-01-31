@@ -9,13 +9,34 @@
 import Foundation
 import SpriteKit
 
-class SKH: SKLabelNode {
+class SKH: SKShapeNode {
     
-    init() {
-        super.init(text: "H")
-        fontColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        fontSize = 80.0
+    var height: CGFloat = 50
+    var middleLength: CGFloat = 30
+    
+    init(leftBottom: CGPoint, scaler: CGFloat) {
+        super.init()
+       
         self.zPosition = 1
+ 
+        let mainPath = UIBezierPath()
+    
+        //left side
+        mainPath.move(to: leftBottom)
+        mainPath.addLine(to: CGPoint(x: leftBottom.x, y: leftBottom.y + (height*scaler)))
+        
+        //middle
+        mainPath.move(to: CGPoint(x: leftBottom.x, y: (leftBottom.y + (height*scaler))/2))
+        mainPath.addLine(to: CGPoint(x: leftBottom.x + (middleLength*scaler), y: (leftBottom.y + (height*scaler))/2))
+        
+        //right side
+        mainPath.move(to: CGPoint(x: leftBottom.x + (middleLength*scaler), y:  leftBottom.y))
+        mainPath.addLine(to: CGPoint(x: leftBottom.x + (middleLength*scaler), y: leftBottom.y + (height*scaler)))
+        
+        self.path = mainPath.cgPath
+       
+        self.strokeColor = UIColor.white
+        self.lineWidth = 2
 
     }
     
