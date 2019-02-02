@@ -9,10 +9,11 @@
 import Foundation
 import SpriteKit
 
+var Hheight: CGFloat = 180
+var HmiddleLength: CGFloat = 90
+
 class SKH: SKShapeNode {
     
-    var height: CGFloat = 50
-    var middleLength: CGFloat = 30
     
     init(leftBottom: CGPoint, scaler: CGFloat) {
         super.init()
@@ -23,15 +24,15 @@ class SKH: SKShapeNode {
     
         //left side
         mainPath.move(to: leftBottom)
-        mainPath.addLine(to: CGPoint(x: leftBottom.x, y: leftBottom.y + (height*scaler)))
+        mainPath.addLine(to: CGPoint(x: leftBottom.x, y: leftBottom.y + (Hheight*scaler)))
         
         //middle
-        mainPath.move(to: CGPoint(x: leftBottom.x, y: (leftBottom.y + (height*scaler))/2))
-        mainPath.addLine(to: CGPoint(x: leftBottom.x + (middleLength*scaler), y: (leftBottom.y + (height*scaler))/2))
+        mainPath.move(to: CGPoint(x: leftBottom.x, y: (leftBottom.y + (Hheight*scaler))/2))
+        mainPath.addLine(to: CGPoint(x: leftBottom.x + (HmiddleLength*scaler), y: (leftBottom.y + (Hheight*scaler))/2))
         
         //right side
-        mainPath.move(to: CGPoint(x: leftBottom.x + (middleLength*scaler), y:  leftBottom.y))
-        mainPath.addLine(to: CGPoint(x: leftBottom.x + (middleLength*scaler), y: leftBottom.y + (height*scaler)))
+        mainPath.move(to: CGPoint(x: leftBottom.x + (HmiddleLength*scaler), y:  leftBottom.y))
+        mainPath.addLine(to: CGPoint(x: leftBottom.x + (HmiddleLength*scaler), y: leftBottom.y + (Hheight*scaler)))
         
         self.path = mainPath.cgPath
        
