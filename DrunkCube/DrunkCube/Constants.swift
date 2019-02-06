@@ -7,3 +7,7 @@
 //
 
 import Foundation
+import UIKit
+
+var blockHeight: CGFloat = 0
+

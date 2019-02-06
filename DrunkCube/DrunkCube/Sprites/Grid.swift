@@ -29,6 +29,8 @@ class Grid: SKSpriteNode {
         let size = CGSize(width: CGFloat(cols)*blockSize+1.0, height: CGFloat(rows)*blockSize+1.0)
         UIGraphicsBeginImageContext(size)
         
+        blockHeight = blockSize
+        
         guard let context = UIGraphicsGetCurrentContext() else {
             return nil
         }
