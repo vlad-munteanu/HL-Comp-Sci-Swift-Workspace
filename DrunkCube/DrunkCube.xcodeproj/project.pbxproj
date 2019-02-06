@@ -18,6 +18,7 @@
 		B8DD593C220B1EB300372152 /* Grass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DD593B220B1EB300372152 /* Grass.swift */; };
 		B8DD593E220B1EBC00372152 /* Bunny.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DD593D220B1EBC00372152 /* Bunny.swift */; };
 		B8DD5940220B1FFD00372152 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DD593F220B1FFD00372152 /* MainMenuScene.swift */; };
+		B8DD5943220B207E00372152 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DD5942220B207E00372152 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B8DD593B220B1EB300372152 /* Grass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grass.swift; sourceTree = "<group>"; };
 		B8DD593D220B1EBC00372152 /* Bunny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bunny.swift; sourceTree = "<group>"; };
 		B8DD593F220B1FFD00372152 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		B8DD5942220B207E00372152 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,14 +70,11 @@
 			children = (
 				B8DD5941220B200200372152 /* Scenes */,
 				B8DD5938220B1E5500372152 /* Sprites */,
-				B81A4D712208777200B1660C /* AppDelegate.swift */,
-				B81A4D772208777200B1660C /* GameScene.swift */,
-				B81A4D792208777200B1660C /* GameViewController.swift */,
-				B81A4D7B2208777200B1660C /* Main.storyboard */,
+				B8DD5944220B208B00372152 /* Supporting Files */,
 				B81A4D7E2208777300B1660C /* Assets.xcassets */,
-				B81A4D802208777300B1660C /* LaunchScreen.storyboard */,
+				B81A4D712208777200B1660C /* AppDelegate.swift */,
 				B81A4D832208777300B1660C /* Info.plist */,
-				B81A4D8922087A6000B1660C /* Grid.swift */,
+				B8DD5942220B207E00372152 /* Constants.swift */,
 			);
 			path = DrunkCube;
 			sourceTree = "<group>";
@@ -86,6 +85,7 @@
 				B8DD5939220B1EA900372152 /* Wolves.swift */,
 				B8DD593B220B1EB300372152 /* Grass.swift */,
 				B8DD593D220B1EBC00372152 /* Bunny.swift */,
+				B81A4D8922087A6000B1660C /* Grid.swift */,
 			);
 			path = Sprites;
 			sourceTree = "<group>";
@@ -93,9 +93,20 @@
 		B8DD5941220B200200372152 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B81A4D772208777200B1660C /* GameScene.swift */,
 				B8DD593F220B1FFD00372152 /* MainMenuScene.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B8DD5944220B208B00372152 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B81A4D792208777200B1660C /* GameViewController.swift */,
+				B81A4D7B2208777200B1660C /* Main.storyboard */,
+				B81A4D802208777300B1660C /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 				B81A4D8A22087A6000B1660C /* Grid.swift in Sources */,
 				B8DD5940220B1FFD00372152 /* MainMenuScene.swift in Sources */,
 				B8DD593A220B1EA900372152 /* Wolves.swift in Sources */,
+				B8DD5943220B207E00372152 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
