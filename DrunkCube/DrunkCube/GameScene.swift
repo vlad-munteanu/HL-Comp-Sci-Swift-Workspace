@@ -36,55 +36,19 @@ class GameScene: SKScene {
         squarey.fillColor = #colorLiteral(red: 0.07459209753, green: 1, blue: 0.07377539981, alpha: 1)
         
         //gamePiece.setScale(0.0625)
-        squarey.position = grid.gridPosition(row: 9, col: 0)
+        squarey.position = grid.gridPosition(row: 0, col: 0)
         grid.addChild(squarey)
  
+    }
+    
+    func resetGame() {
+        grid.removeAllChildren()
     }
     
   
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        while(isAtTheEnd == false) {
-            
-            let tempSquarey = SKShapeNode(rectOf: CGSize(width: grid.blockSize, height: grid.blockSize))
-            tempSquarey.fillColor = #colorLiteral(red: 0.07459209753, green: 1, blue: 0.07377539981, alpha: 1)
-            
-            if(turn%2 == 0) {
-                let temp = Int.random(in: 0...4)
-                if(temp == 1) {
-                    if(positionOfSquare.0 != 20) {
-                        tempSquarey.position = grid.gridPosition(row: positionOfSquare.0+1, col: 0)
-                        positionOfSquare.0 = positionOfSquare.0 + 1
-                    }
-                } else if (temp == 2) {
-                    if(positionOfSquare.0 != 0) {
-                        tempSquarey.position = grid.gridPosition(row: positionOfSquare.0-1, col: 0)
-                        positionOfSquare.0 = positionOfSquare.0 - 1
-                    }
-                } else if (temp == 3) {
-                    if(positionOfSquare.1 != 11) {
-                        tempSquarey.position = grid.gridPosition(row: positionOfSquare.0, col: positionOfSquare.1+1)
-                        
-                        positionOfSquare.1 = positionOfSquare.1 + 1
-                    }
-                } else if (temp == 4) {
-                    if(positionOfSquare.1 != 0) {
-                        tempSquarey.position = grid.gridPosition(row: positionOfSquare.0, col: positionOfSquare.1-1)
-                        positionOfSquare.1 = positionOfSquare.1 - 1
-                    }
-                }
-                
-            } else {
-                tempSquarey.position = grid.gridPosition(row: positionOfSquare.0, col: positionOfSquare.1+1)
-                positionOfSquare.1 = positionOfSquare.1 + 1
-            }
-            
-            
-            //gamePiece.setScale(0.0625)
-          
-            grid.addChild(tempSquarey)
-            turn = turn + 1
-        }
+        
     }
     
     
@@ -96,9 +60,12 @@ class GameScene: SKScene {
         if(turn%2 == 0) {
             let temp = Int.random(in: 0...4)
             if(temp == 1) {
-                if(positionOfSquare.0 != 20) {
+                if(positionOfSquare.0 <= 19) {
                     tempSquarey.position = grid.gridPosition(row: positionOfSquare.0+1, col: 0)
                     positionOfSquare.0 = positionOfSquare.0 + 1
+                } else {
+                    tempSquarey.position = grid.gridPosition(row: 0, col: 0)
+                    positionOfSquare.0 = 0
                 }
             } else if (temp == 2) {
                 if(positionOfSquare.0 != 0) {
@@ -106,10 +73,14 @@ class GameScene: SKScene {
                     positionOfSquare.0 = positionOfSquare.0 - 1
                 }
             } else if (temp == 3) {
-                if(positionOfSquare.1 != 11) {
+                if(positionOfSquare.1 <= 9) {
                     tempSquarey.position = grid.gridPosition(row: positionOfSquare.0, col: positionOfSquare.1+1)
                     
                     positionOfSquare.1 = positionOfSquare.1 + 1
+                } else {
+                    tempSquarey.position = grid.gridPosition(row: positionOfSquare.0, col: 0)
+                    
+                    positionOfSquare.1 = 0
                 }
             } else if (temp == 4) {
                 if(positionOfSquare.1 != 0) {
@@ -118,9 +89,16 @@ class GameScene: SKScene {
                 }
             }
             
-        } else {
+        } else if(positionOfSquare.1 <= 9) {
             tempSquarey.position = grid.gridPosition(row: positionOfSquare.0, col: positionOfSquare.1+1)
             positionOfSquare.1 = positionOfSquare.1 + 1
+        } else {
+            resetGame()
+    
+            positionOfSquare.0 = Int.random(in: 0..<19)
+            positionOfSquare.1 = 0
+            
+            tempSquarey.position = grid.gridPosition(row: positionOfSquare.0, col: positionOfSquare.1)
         }
         
         
