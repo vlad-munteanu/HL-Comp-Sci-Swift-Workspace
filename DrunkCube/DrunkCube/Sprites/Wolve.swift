@@ -1,5 +1,5 @@
 //
-//  Bunny.swift
+//  Wolves.swift
 //  DrunkCube
 //
 //  Created by Vlad Munteanu on 2/6/19.
@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class Bunny: SKSpriteNode {
+class Wolve: SKSpriteNode {
     init() {
         super.init(texture: SKTexture(imageNamed: "temp"), color: UIColor.clear, size: CGSize(width: 20,height: 20))
     }
