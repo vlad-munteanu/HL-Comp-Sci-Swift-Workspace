@@ -10,7 +10,7 @@ import SpriteKit
 
 class Bunny: SKSpriteNode {
     init() {
-        super.init(texture: SKTexture(imageNamed: "temp"), color: UIColor.clear, size: CGSize(width: 20,height: 20))
+        super.init(texture: SKTexture(imageNamed: "temp"), color: UIColor.clear, size: CGSize(width: blockHeight,height: blockHeight))
     }
     
     required init?(coder aDecoder: NSCoder) {
