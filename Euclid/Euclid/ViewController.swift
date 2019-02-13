@@ -23,6 +23,31 @@ class ViewController: UIViewController {
 
     @IBAction func findGCDbutton(_ sender: Any) {
         if(numberOneField != nil) && (numberTwoField != nil) {
+    
+            let numOne = Int(numberOneField.text)!
+            let numTwo = Int(numberTwoField.text)!
+            
+            if(numOne > numTwo) {
+               outputLet.text = String(gcd(numOne, numTwo))
+            } else {
+                outputLet.text = String(gcd(numTwo, numOne))
+            }
+            
+        }
+    }
+    
+    func gcd(num: Int, num2: Int) -> Int {
+        var temp1 = num
+        var temp2 = num2
+        for i in 0...num {
+            let div = temp1/temp2
+            let remind = temp1%temp2
+            
+            if remind == 0 {
+                return temp2
+            } else {
+                //let tempyResult = 
+            }
             
         }
     }
