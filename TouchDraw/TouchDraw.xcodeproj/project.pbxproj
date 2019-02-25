@@ -15,6 +15,7 @@
 		B8F9ACA0222429C100A6AA8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F9AC9E222429C100A6AA8A /* Main.storyboard */; };
 		B8F9ACA2222429C200A6AA8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8F9ACA1222429C200A6AA8A /* Assets.xcassets */; };
 		B8F9ACA5222429C200A6AA8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8F9ACA3222429C200A6AA8A /* LaunchScreen.storyboard */; };
+		B8F9ACAD22242C9900A6AA8A /* boolChris.png in Resources */ = {isa = PBXBuildFile; fileRef = B8F9ACAC22242C9900A6AA8A /* boolChris.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B8F9ACA1222429C200A6AA8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8F9ACA4222429C200A6AA8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B8F9ACA6222429C200A6AA8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8F9ACAC22242C9900A6AA8A /* boolChris.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boolChris.png; path = ../../../../../../Downloads/boolChris.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				B8F9AC96222429C100A6AA8A /* GameScene.sks */,
 				B8F9AC98222429C100A6AA8A /* Actions.sks */,
 				B8F9AC9A222429C100A6AA8A /* GameScene.swift */,
+				B8F9ACAC22242C9900A6AA8A /* boolChris.png */,
 				B8F9AC9C222429C100A6AA8A /* GameViewController.swift */,
 				B8F9AC9E222429C100A6AA8A /* Main.storyboard */,
 				B8F9ACA1222429C200A6AA8A /* Assets.xcassets */,
@@ -134,6 +137,7 @@
 				B8F9ACA0222429C100A6AA8A /* Main.storyboard in Resources */,
 				B8F9AC97222429C100A6AA8A /* GameScene.sks in Resources */,
 				B8F9ACA2222429C200A6AA8A /* Assets.xcassets in Resources */,
+				B8F9ACAD22242C9900A6AA8A /* boolChris.png in Resources */,
 				B8F9ACA5222429C200A6AA8A /* LaunchScreen.storyboard in Resources */,
 				B8F9AC99222429C100A6AA8A /* Actions.sks in Resources */,
 			);
@@ -225,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -280,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
