@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var textfield: UITextField!
+    var repetitionCounter = [Int: Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +21,21 @@ class ViewController: UIViewController {
     
     @IBAction func goButton(_ sender: Any) {
         if textfield.text != nil {
-            for i in textfield.text {
-                
+            var tempArray = textfield.text?.ascii
+            for i in tempArray! {
+                var tempCounter = 0
+                for x in 0..<tempArray.size {
+                    if i == x {
+                        tempCounter += 1
+                        tempArray?.remove(at: x)
+                    }
+                }
+                repetitionCounter[i] = tempCounter
             }
+        }
+        
+        for (asciiCode, numOfTimes) in repetitionCounter {
+            print("Ascii Code:\(asciiCode), Num of Reps \(numOfTimes)")
         }
     }
     

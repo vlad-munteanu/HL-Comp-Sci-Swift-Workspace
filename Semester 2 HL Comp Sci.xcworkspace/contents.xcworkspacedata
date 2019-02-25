@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:TouchDraw/TouchDraw.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Huffman/Huffman.xcodeproj">
    </FileRef>
    <FileRef
