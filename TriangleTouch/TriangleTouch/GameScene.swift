@@ -24,6 +24,7 @@ class GameScene: SKScene {
     
     func touchDown(atPoint pos : CGPoint) {
         if(touchePos.count <= 1 ) {
+            if(touchePos.count == 0) { self.removeAllChildren() }
             touchePos.append(pos)
             let point = SKShapeNode(circleOfRadius: 5.0)
             point.fillColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
