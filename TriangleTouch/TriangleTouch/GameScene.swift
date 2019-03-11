@@ -40,7 +40,7 @@ class GameScene: SKScene {
     func makeTriangle() {
         let Triangle = SKShapeNode(points: &touchePos, count: touchePos.count)
         
-        Triangle.fillColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        Triangle.fillColor = .random()
          self.addChild(Triangle)
         touchePos.removeAll()
 
@@ -59,4 +59,21 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
+}
+
+extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
+
+extension UIColor {
+    static func random() -> UIColor {
+        
+        return UIColor(red: .random(),
+                       green: .random(),
+                       blue: .random(),
+                       alpha: 1.0)
+}
+
 }
