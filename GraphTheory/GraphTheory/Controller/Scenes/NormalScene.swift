@@ -1,23 +1,27 @@
 //
-//  GameScene.swift
-//  TriangleTouch
+//  NormalScene.swift
+//  GraphTheory
 //
-//  Created by Vlad Munteanu on 3/11/19.
+//  Created by Vlad Munteanu on 3/13/19.
 //  Copyright © 2019 Vlad Munteanu. All rights reserved.
 //
 
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class NormalScene: SKScene {
     
     var touchePos = [CGPoint]()
     
     override func didMove(to view: SKView) {
-
+        
         
         self.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        
+      
     }
+    
+    
     
     
     func touchDown(atPoint pos : CGPoint) {
@@ -40,39 +44,19 @@ class GameScene: SKScene {
         let Triangle = SKShapeNode(points: &touchePos, count: touchePos.count)
         
         Triangle.fillColor = .random()
-         self.addChild(Triangle)
+        self.addChild(Triangle)
         touchePos.removeAll()
-
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }
+        
     }
-    
-//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        for t in touches { self.touchesMoved(toPoint: t.location(in: self)) }
-//    }
-//
-    
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
 }
 
-extension CGFloat {
-    static func random() -> CGFloat {
-        return CGFloat(arc4random()) / CGFloat(UInt32.max)
-    }
-}
-
-extension UIColor {
-    static func random() -> UIColor {
-        
-        return UIColor(red: .random(),
-                       green: .random(),
-                       blue: .random(),
-                       alpha: 1.0)
-}
-
-}
