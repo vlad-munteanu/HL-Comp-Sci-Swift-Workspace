@@ -9,14 +9,14 @@
 import Foundation
 
 class FrogGame {
-    var maxHop: Int = 8
+    var maxHop: Int = 13
     var distance: Int = 50
     var currentHopLength = 20
     var numberOfHops = 0
     
     
     func reset() {
-        maxHop = 8
+        maxHop = 13
         distance = 50
         currentHopLength = 20
         numberOfHops = 0

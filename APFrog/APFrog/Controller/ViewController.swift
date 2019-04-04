@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     
-    var frogGame = FrogGame()
+    var frog1 = FrogGame()
+    var frog2 = FrogGame()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,54 +31,64 @@ class ViewController: UIViewController {
     }
 
     
-    func runSimulation(amount: Int) -> Double {
+    func runSimulation(amount: Int) {
         
-        var wins = 0.0
-        var loses = 0.0
+        var frog1Win = 0.0
+        var frog2Win = 0.0
         
         var gameRunning = true
         
-        for _ in 0...amount {
+        for i in 0...amount {
            
             gameRunning = true
             while gameRunning == true {
-                if frogGame.numberOfHops < frogGame.maxHop {
-                    frogGame.currentHopLength = Int.random(in: -10...20)
-                    frogGame.distance = frogGame.distance - frogGame.currentHopLength
-                    frogGame.numberOfHops += 1
-                    print("current dist: \(frogGame.distance)")
-                } else if frogGame.numberOfHops == frogGame.maxHop {
-                    frogGame.currentHopLength = Int.random(in: -10...20)
-                    frogGame.distance = frogGame.distance - frogGame.currentHopLength
-                    frogGame.numberOfHops += 1
-                    print("current dist: \(frogGame.distance)")
+                if frog1.numberOfHops < frog1.maxHop {
+                    frog1.currentHopLength = Int.random(in: -10...20)
+                    frog1.distance = frog1.distance - frog1.currentHopLength
+                    frog1.numberOfHops += 1
+                    
+                    frog2.currentHopLength = Int.random(in: -10...20)
+                    frog2.distance = frog2.distance - frog2.currentHopLength
+                    frog2.numberOfHops += 1
+                    
+                    print("current dist: \(frog1.distance)")
+                } else if frog1.numberOfHops == frog1.maxHop {
+                    frog1.currentHopLength = Int.random(in: -10...20)
+                    frog1.distance = frog1.distance - frog1.currentHopLength
+                    frog1.numberOfHops += 1
+                    print("current dist: \(frog1.distance)")
+                    
+                    frog2.currentHopLength = Int.random(in: -10...20)
+                    frog2.distance = frog2.distance - frog2.currentHopLength
+                    frog2.numberOfHops += 1
                 } else {
-                     print("current dist: \(frogGame.distance)")
-                    if frogGame.distance <= 0 {
-                        wins += 1
-                        print("another win")
+                     print("current dist: \(frog1.distance)")
+                    if frog1.distance < frog2.distance {
+                        frog1Win += 1
+                        print("frog 1 win")
                     } else {
-                        loses += 1
-                        print("another lose")
+                        frog2Win += 1
+                        print("frog 2 win")
                     }
-                    frogGame.reset()
+                    frog1.reset()
+                    frog2.reset()
                     gameRunning = false
                     print("")
                     print("")
                     print("")
                 }
             }
-            print("")
+            print("Race \(i)")
             
             
         }
         
-        print("wins \(wins)")
-        print("loses \(loses)")
+        print("wins for frog 1 \(frog1Win)")
+        print("wins for frog 2 \(frog2Win)")
         
-        let percentWin = Double(wins/(loses+wins))
+       // let percentWin = Double(wins/(loses+wins))
         
-        return percentWin
+        //return percentWin
     }
     
     
