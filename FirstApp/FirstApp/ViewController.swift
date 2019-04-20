@@ -22,8 +22,18 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: Any) {
         print("button pressed")
+        numberOfClicks += 1
+        print(numberOfClicks)
+        
+        numberLabel.text = "Number: \(numberOfClicks)"
         
     }
+    
+    
+    @IBAction func resetButton(_ sender: Any) {
+        
+    }
+    
     
 }
 
