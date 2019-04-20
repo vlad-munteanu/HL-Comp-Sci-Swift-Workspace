@@ -8,26 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		FCE5DF7A226BADF500FD66D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE5DF79226BADF500FD66D8 /* AppDelegate.swift */; };
-		FCE5DF7C226BADF500FD66D8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FCE5DF7B226BADF500FD66D8 /* GameScene.sks */; };
-		FCE5DF7E226BADF500FD66D8 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = FCE5DF7D226BADF500FD66D8 /* Actions.sks */; };
 		FCE5DF80226BADF500FD66D8 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE5DF7F226BADF500FD66D8 /* GameScene.swift */; };
 		FCE5DF82226BADF500FD66D8 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE5DF81226BADF500FD66D8 /* GameViewController.swift */; };
 		FCE5DF85226BADF500FD66D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE5DF83226BADF500FD66D8 /* Main.storyboard */; };
 		FCE5DF87226BADF600FD66D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE5DF86226BADF600FD66D8 /* Assets.xcassets */; };
 		FCE5DF8A226BADF600FD66D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE5DF88226BADF600FD66D8 /* LaunchScreen.storyboard */; };
+		FCE5DF92226BB19700FD66D8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = FCE5DF91226BB19700FD66D8 /* GameScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FCE5DF76226BADF500FD66D8 /* PongExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PongExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE5DF79226BADF500FD66D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCE5DF7B226BADF500FD66D8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		FCE5DF7D226BADF500FD66D8 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		FCE5DF7F226BADF500FD66D8 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		FCE5DF81226BADF500FD66D8 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FCE5DF84226BADF500FD66D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCE5DF86226BADF600FD66D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCE5DF89226BADF600FD66D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCE5DF8B226BADF600FD66D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCE5DF91226BB19700FD66D8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				FCE5DF79226BADF500FD66D8 /* AppDelegate.swift */,
-				FCE5DF7B226BADF500FD66D8 /* GameScene.sks */,
-				FCE5DF7D226BADF500FD66D8 /* Actions.sks */,
+				FCE5DF91226BB19700FD66D8 /* GameScene.sks */,
 				FCE5DF7F226BADF500FD66D8 /* GameScene.swift */,
 				FCE5DF81226BADF500FD66D8 /* GameViewController.swift */,
 				FCE5DF83226BADF500FD66D8 /* Main.storyboard */,
@@ -131,11 +128,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE5DF92226BB19700FD66D8 /* GameScene.sks in Resources */,
 				FCE5DF85226BADF500FD66D8 /* Main.storyboard in Resources */,
-				FCE5DF7C226BADF500FD66D8 /* GameScene.sks in Resources */,
 				FCE5DF87226BADF600FD66D8 /* Assets.xcassets in Resources */,
 				FCE5DF8A226BADF600FD66D8 /* LaunchScreen.storyboard in Resources */,
-				FCE5DF7E226BADF500FD66D8 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -280,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -297,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8C8RXSHKT;
 				INFOPLIST_FILE = PongExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,6 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8C8RXSHKT;
 				INFOPLIST_FILE = PongExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
