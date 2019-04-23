@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var primeLabel: UILabel!
     
     var currentNumber = (number: 0,count: 1)
     var tempCount = 0
@@ -59,6 +60,17 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    
+    //Prime stuff
+    var primeCount = 0
+    
+    @IBAction func primeButton(_ sender: Any) {
+        for i in 0..<1000000 {
+           
+        }
+    }
+    
     
 
 }
