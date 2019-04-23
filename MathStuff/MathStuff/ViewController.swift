@@ -66,15 +66,26 @@ class ViewController: UIViewController {
     var primeCount = 0
     
     @IBAction func primeButton(_ sender: Any) {
-        for i in 0..<1000000 {
+        for i in 0..<100 {
             if i.isPrime == true {
-                isCircle(digits: i., primeNum: Int)
+                isCircle(digits: i.digitCount, primeNum: i)
             }
         }
     }
     
     func isCircle(digits: Int, primeNum: Int) {
-        
+        var tempArray = primeNum.digits
+    
+        if digits == 1 {
+            primeCount += 1
+            print(primeNum)
+        } else if digits == 2 {
+            //var tempNumber = (tempArray[1] + tempArray[0])
+            if (Int(tempArray[1] + tempArray[0]))!.isPrime == true {
+                primeCount += 1
+                print(primeNum)
+            }
+        } 
     }
     
     
@@ -87,6 +98,12 @@ extension Int {
         guard self != 2     else { return true  }
         guard self % 2 != 0 else { return false }
         return !stride(from: 3, through: Int(sqrt(Double(self))), by: 2).contains { self % $0 == 0 }
+    }
+}
+
+extension BinaryInteger {
+    var digits: [String] {
+        return String(describing: self).compactMap { String($0) }
     }
 }
 
