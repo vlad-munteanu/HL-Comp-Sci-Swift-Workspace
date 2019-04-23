@@ -85,7 +85,27 @@ class ViewController: UIViewController {
                 primeCount += 1
                 print(primeNum)
             }
-        } 
+        } else if digits == 3 {
+            if ((Int(tempArray[1] + tempArray[2] + tempArray[0]))!.isPrime == true) && ((Int(tempArray[2] + tempArray[0] + tempArray[1]))!.isPrime == true) {
+                primeCount += 1
+                print(primeNum)
+            }
+        } else if digits >= 4 {
+            if checkCircle(numberArry: tempArray) == true {
+                primeCount += 1
+            }
+        }
+    }
+    
+    func checkCircle(numberArry: [String]) -> Bool {
+        var tempDigit = 0
+        for i in 0...numberArry.count {
+            
+            if (Int(numberArry[tempDigit+1] + numberArry[tempDigit+2] + numberArry[tempDigit]))!.isPrime == true {
+                
+            }
+        }
+        return false
     }
     
     
