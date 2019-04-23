@@ -98,8 +98,23 @@ class ViewController: UIViewController {
     }
     
     func checkCircle(numberArry: [String]) -> Bool {
+        
+        /*
+         0123
+         1230
+         2301
+         3012
+ */
+        var tempArray = numberArry
         var tempDigit = 0
+        var tempString = ""
         for i in 0...numberArry.count {
+            tempDigit = tempArray[0]
+            
+            tempArray[0] = tempArray[1]
+            tempArray[1] = tempArray[2]
+            
+           
             
             if (Int(numberArry[tempDigit+1] + numberArry[tempDigit+2] + numberArry[tempDigit]))!.isPrime == true {
                 
