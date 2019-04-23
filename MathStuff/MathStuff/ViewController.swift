@@ -66,11 +66,14 @@ class ViewController: UIViewController {
     var primeCount = 0
     
     @IBAction func primeButton(_ sender: Any) {
-        for i in 0..<100 {
-            if i.isPrime == true {
-                isCircle(digits: i.digitCount, primeNum: i)
-            }
-        }
+//        for i in 0..<1000 {
+//            if i.isPrime == true {
+//                isCircle(digits: i.digitCount, primeNum: i)
+//            }
+//        }
+        
+        var i = 1234
+        isCircle(digits: i.digitCount, primeNum: i)
     }
     
     func isCircle(digits: Int, primeNum: Int) {
@@ -105,20 +108,29 @@ class ViewController: UIViewController {
          2301
          3012
  */
+        
         var tempArray = numberArry
-        var tempDigit = 0
+        print(tempArray)
+        var tempDigit = ""
         var tempString = ""
-        for i in 0...numberArry.count {
+        
+        for i in 0...numberArry.count-1 {
+            
             tempDigit = tempArray[0]
             
-            tempArray[0] = tempArray[1]
-            tempArray[1] = tempArray[2]
-            
-           
-            
-            if (Int(numberArry[tempDigit+1] + numberArry[tempDigit+2] + numberArry[tempDigit]))!.isPrime == true {
-                
+            for x in 0..<numberArry.count {
+                if x == numberArry.count-1 {
+                   tempArray[x] = tempDigit
+                } else {
+                    tempArray[x] = tempArray[x+1]
+                }
             }
+            
+           print(tempArray)
+            
+//            if (Int(numberArry[tempDigit+1] + numberArry[tempDigit+2] + numberArry[tempDigit]))!.isPrime == true {
+//
+//            }
         }
         return false
     }
