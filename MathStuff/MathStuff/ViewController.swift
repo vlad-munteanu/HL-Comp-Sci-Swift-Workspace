@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         print(tempCount)
         print(currentNumber.number)
         numberLabel.text = "Number:\(currentNumber.number)"
-//        print(currentNumber.count)
+        //        print(currentNumber.count)
     }
     
     func checkNum(num: Int) -> Int{
@@ -67,11 +67,60 @@ class ViewController: UIViewController {
     
     @IBAction func primeButton(_ sender: Any) {
         for i in 0..<1000000 {
-           
+            if i.isPrime == true {
+                isCircle(digits: i., primeNum: Int)
+            }
         }
     }
     
+    func isCircle(digits: Int, primeNum: Int) {
+        
+    }
     
+    
+    
+}
 
+extension Int {
+    var isPrime: Bool {
+        guard self >= 2     else { return false }
+        guard self != 2     else { return true  }
+        guard self % 2 != 0 else { return false }
+        return !stride(from: 3, through: Int(sqrt(Double(self))), by: 2).contains { self % $0 == 0 }
+    }
+}
+
+public extension Int {
+    /// returns number of digits in Int number
+    public var digitCount: Int {
+        get {
+            return numberOfDigits(in: self)
+        }
+    }
+    /// returns number of useful digits in Int number
+    public var usefulDigitCount: Int {
+        get {
+            var count = 0
+            for digitOrder in 0..<self.digitCount {
+                /// get each order digit from self
+                let digit = self % (Int(truncating: pow(10, digitOrder + 1) as NSDecimalNumber))
+                    / Int(truncating: pow(10, digitOrder) as NSDecimalNumber)
+                if isUseful(digit) { count += 1 }
+            }
+            return count
+        }
+    }
+    // private recursive method for counting digits
+    private func numberOfDigits(in number: Int) -> Int {
+        if number < 10 && number > 0 || number > -10 && number < 0 {
+            return 1
+        } else {
+            return 1 + numberOfDigits(in: number/10)
+        }
+    }
+    // returns true if digit is useful in respect to self
+    private func isUseful(_ digit: Int) -> Bool {
+        return (digit != 0) && (self % digit == 0)
+    }
 }
 
