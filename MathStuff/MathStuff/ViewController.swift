@@ -66,12 +66,14 @@ class ViewController: UIViewController {
     var primeCount = 0
     
     @IBAction func primeButton(_ sender: Any) {
+        primeCount = 0
         for i in 0..<1000000 {
             if i.isPrime == true {
                 isCircle(digits: i.digitCount, primeNum: i)
             }
         }
         print("Prime Count: \(primeCount)")
+        primeLabel.text = "Prime Count: \(primeCount)"
     }
     
     func isCircle(digits: Int, primeNum: Int) {
