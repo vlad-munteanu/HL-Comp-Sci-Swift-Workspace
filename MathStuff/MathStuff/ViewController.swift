@@ -96,6 +96,7 @@ class ViewController: UIViewController {
         } else if digits >= 4 {
             if checkCircle(numberArry: tempArray) == true {
                 primeCount += 1
+                print(primeNum)
             }
         }
     }
@@ -126,14 +127,14 @@ class ViewController: UIViewController {
                 }
             }
             
-           print(tempArray)
+           //print(tempArray)
             
             
             for y in tempArray {
                 tempString += y
             }
             
-            print(tempString)
+            //print(tempString)
             
             if Int(tempString)!.isPrime == true {
                 if i == numberArry.count-2 {
