@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26A5B713B0770C24076C75FE /* Pods_BlackJack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB43B9696008678B69A221B /* Pods_BlackJack.framework */; };
 		FC55D0A8228F9F3800EDA8B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC55D0A7228F9F3800EDA8B8 /* AppDelegate.swift */; };
-		FC55D0AA228F9F3800EDA8B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC55D0A9228F9F3800EDA8B8 /* ViewController.swift */; };
-		FC55D0AD228F9F3800EDA8B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC55D0AB228F9F3800EDA8B8 /* Main.storyboard */; };
+		FC55D0AA228F9F3800EDA8B8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC55D0A9228F9F3800EDA8B8 /* MainVC.swift */; };
 		FC55D0AF228F9F3A00EDA8B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC55D0AE228F9F3A00EDA8B8 /* Assets.xcassets */; };
 		FC55D0B2228F9F3A00EDA8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC55D0B0228F9F3A00EDA8B8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CB43B9696008678B69A221B /* Pods_BlackJack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlackJack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93EDD89BA807E1D253A8F70F /* Pods-BlackJack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackJack.debug.xcconfig"; path = "Target Support Files/Pods-BlackJack/Pods-BlackJack.debug.xcconfig"; sourceTree = "<group>"; };
+		E4409BD790B8368DD35E9C21 /* Pods-BlackJack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlackJack.release.xcconfig"; path = "Target Support Files/Pods-BlackJack/Pods-BlackJack.release.xcconfig"; sourceTree = "<group>"; };
 		FC55D0A4228F9F3800EDA8B8 /* BlackJack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackJack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC55D0A7228F9F3800EDA8B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC55D0A9228F9F3800EDA8B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC55D0AC228F9F3800EDA8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC55D0A9228F9F3800EDA8B8 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		FC55D0AE228F9F3A00EDA8B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC55D0B1228F9F3A00EDA8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC55D0B3228F9F3A00EDA8B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,17 +31,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26A5B713B0770C24076C75FE /* Pods_BlackJack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C343A47A9A372787E76181D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93EDD89BA807E1D253A8F70F /* Pods-BlackJack.debug.xcconfig */,
+				E4409BD790B8368DD35E9C21 /* Pods-BlackJack.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		73D909A8EE99FAB5D093AF49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CB43B9696008678B69A221B /* Pods_BlackJack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC55D09B228F9F3800EDA8B8 = {
 			isa = PBXGroup;
 			children = (
 				FC55D0A6228F9F3800EDA8B8 /* BlackJack */,
 				FC55D0A5228F9F3800EDA8B8 /* Products */,
+				6C343A47A9A372787E76181D /* Pods */,
+				73D909A8EE99FAB5D093AF49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +76,45 @@
 		FC55D0A6228F9F3800EDA8B8 /* BlackJack */ = {
 			isa = PBXGroup;
 			children = (
-				FC55D0A7228F9F3800EDA8B8 /* AppDelegate.swift */,
-				FC55D0A9228F9F3800EDA8B8 /* ViewController.swift */,
-				FC55D0AB228F9F3800EDA8B8 /* Main.storyboard */,
-				FC55D0AE228F9F3A00EDA8B8 /* Assets.xcassets */,
-				FC55D0B0228F9F3A00EDA8B8 /* LaunchScreen.storyboard */,
+				FC55D0B92290903D00EDA8B8 /* View */,
+				FC55D0BA2290904100EDA8B8 /* Model */,
+				FC55D0BB2290904400EDA8B8 /* Controller */,
+				FC55D0BC2290904A00EDA8B8 /* Supporting Files */,
 				FC55D0B3228F9F3A00EDA8B8 /* Info.plist */,
 			);
 			path = BlackJack;
+			sourceTree = "<group>";
+		};
+		FC55D0B92290903D00EDA8B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC55D0BA2290904100EDA8B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC55D0BB2290904400EDA8B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC55D0A9228F9F3800EDA8B8 /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC55D0BC2290904A00EDA8B8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC55D0A7228F9F3800EDA8B8 /* AppDelegate.swift */,
+				FC55D0B0228F9F3A00EDA8B8 /* LaunchScreen.storyboard */,
+				FC55D0AE228F9F3A00EDA8B8 /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC55D0B6228F9F3A00EDA8B8 /* Build configuration list for PBXNativeTarget "BlackJack" */;
 			buildPhases = (
+				6DC7264C2C83E0337ACD4BDF /* [CP] Check Pods Manifest.lock */,
 				FC55D0A0228F9F3800EDA8B8 /* Sources */,
 				FC55D0A1228F9F3800EDA8B8 /* Frameworks */,
 				FC55D0A2228F9F3800EDA8B8 /* Resources */,
+				994B9599B92ABA7B1474A787 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,18 +179,64 @@
 			files = (
 				FC55D0B2228F9F3A00EDA8B8 /* LaunchScreen.storyboard in Resources */,
 				FC55D0AF228F9F3A00EDA8B8 /* Assets.xcassets in Resources */,
-				FC55D0AD228F9F3800EDA8B8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6DC7264C2C83E0337ACD4BDF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlackJack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		994B9599B92ABA7B1474A787 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlackJack/Pods-BlackJack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlackJack/Pods-BlackJack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC55D0A0228F9F3800EDA8B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC55D0AA228F9F3800EDA8B8 /* ViewController.swift in Sources */,
+				FC55D0AA228F9F3800EDA8B8 /* MainVC.swift in Sources */,
 				FC55D0A8228F9F3800EDA8B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +244,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC55D0AB228F9F3800EDA8B8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC55D0AC228F9F3800EDA8B8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC55D0B0228F9F3A00EDA8B8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -213,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -280,6 +373,7 @@
 		};
 		FC55D0B7228F9F3A00EDA8B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93EDD89BA807E1D253A8F70F /* Pods-BlackJack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +392,7 @@
 		};
 		FC55D0B8228F9F3A00EDA8B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4409BD790B8368DD35E9C21 /* Pods-BlackJack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
