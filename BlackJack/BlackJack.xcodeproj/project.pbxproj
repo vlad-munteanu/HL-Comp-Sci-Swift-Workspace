@@ -12,6 +12,8 @@
 		FC55D0AA228F9F3800EDA8B8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC55D0A9228F9F3800EDA8B8 /* MainVC.swift */; };
 		FC55D0AF228F9F3A00EDA8B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC55D0AE228F9F3A00EDA8B8 /* Assets.xcassets */; };
 		FC55D0B2228F9F3A00EDA8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC55D0B0228F9F3A00EDA8B8 /* LaunchScreen.storyboard */; };
+		FCA2546222925290000A6479 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2546122925290000A6479 /* Card.swift */; };
+		FCA2546422925299000A6479 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2546322925299000A6479 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FC55D0AE228F9F3A00EDA8B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC55D0B1228F9F3A00EDA8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC55D0B3228F9F3A00EDA8B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCA2546122925290000A6479 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FCA2546322925299000A6479 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		FC55D0BA2290904100EDA8B8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FCA2546122925290000A6479 /* Card.swift */,
+				FCA2546322925299000A6479 /* Game.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -237,7 +243,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC55D0AA228F9F3800EDA8B8 /* MainVC.swift in Sources */,
+				FCA2546222925290000A6479 /* Card.swift in Sources */,
 				FC55D0A8228F9F3800EDA8B8 /* AppDelegate.swift in Sources */,
+				FCA2546422925299000A6479 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
