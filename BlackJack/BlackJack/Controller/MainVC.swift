@@ -57,9 +57,11 @@ class MainVC: UIViewController {
         
         if myCount > 21 {
             //alert lost
+             print("you went over, you lost")
             reset()
         } else if myCount == 21 {
             //alert you win
+            print("you win")
             
             reset()
         }
@@ -75,10 +77,11 @@ class MainVC: UIViewController {
         
         if dealersCount > 21 {
             //dealer went over, you won
+            print("deealer went over, you won")
             reset()
         } else if dealersCount == 21 {
             //dealer won, you lost
-            
+             print("deealer won, you lost")
             reset()
         }
         
