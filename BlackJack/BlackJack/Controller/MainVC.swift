@@ -9,19 +9,93 @@
 import UIKit
 
 class MainVC: UIViewController {
-
+    
+    
     
    // var keepPlaying = true
+    @IBOutlet weak var totalLabel: UILabel!
+    var myCount = 0
+    var dealersCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        startGame()
+    }
+    
+    
+    func startGame() {
+        print("Ok lets start")
+    }
+    
+    
+    @IBAction func hitmeButton(_ sender: Any) {
+        print("hit me")
+        drawCard()
+        dealerDraws()
         
     }
     
     
+    @IBAction func stayButton(_ sender: Any) {
+        print("stay")
+        dealerDraws()
+    }
     
-
-
+    
+    func setLabel() {
+        totalLabel.text = "Total:\(myCount)"
+    }
+    
+    func drawCard() {
+        let num = Int.random(in: 1...11)
+        
+        if num == 1 || num == 11 {
+            //alert asking user if they want 1 or 11
+        }
+        
+        myCount += num
+        
+        if myCount > 21 {
+            //alert lost
+            reset()
+        } else if myCount == 21 {
+            //alert you win
+            
+            reset()
+        }
+        
+        
+        setLabel()
+    }
+    
+    func dealerDraws() {
+        let num = Int.random(in: 1...11)
+        
+        dealersCount += num
+        
+        if dealersCount > 21 {
+            //dealer went over, you won
+            reset()
+        } else if dealersCount == 21 {
+            //dealer won, you lost
+            
+            reset()
+        }
+        
+        print(dealersCount)
+    }
+    
+    
+    
+   
+    
+    func reset() {
+        myCount = 0
+        dealersCount = 0
+        setLabel()
+    }
+    
+    
+    
 }
 
